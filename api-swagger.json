@@ -1,0 +1,120 @@
+{
+	"swagger": "2.0",
+	"basePath": "/_db/cad/api",
+	"paths": {
+		"/docs/*": {
+			"get": {
+				"produces": [
+					"application/json"
+				],
+				"parameters": [],
+				"tags": [],
+				"consumes": [],
+				"responses": {
+					"500": {
+						"description": "Default error response.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"error": {
+									"enum": [
+										true
+									],
+									"type": [
+										"array",
+										"boolean",
+										"number",
+										"object",
+										"string",
+										"null"
+									]
+								},
+								"errorNum": {
+									"type": "integer"
+								},
+								"errorMessage": {
+									"type": "string"
+								},
+								"code": {
+									"type": "integer"
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"error"
+							]
+						}
+					}
+				}
+			}
+		},
+		"/project/{key}": {
+			"get": {
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"required": true,
+						"description": "Key of the project.",
+						"type": "string",
+						"name": "key",
+						"in": "path"
+					}
+				],
+				"description": "Retrieves an project from the \"projects\" collection by key.",
+				"summary": "Retrieve an project by key",
+				"tags": [],
+				"consumes": [],
+				"responses": {
+					"200": {
+						"schema": {
+							"type": "object",
+							"properties": {},
+							"additionalProperties": false
+						},
+						"description": "Project stored in the collection \"projects\"."
+					},
+					"500": {
+						"description": "Default error response.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"error": {
+									"enum": [
+										true
+									],
+									"type": [
+										"array",
+										"boolean",
+										"number",
+										"object",
+										"string",
+										"null"
+									]
+								},
+								"errorNum": {
+									"type": "integer"
+								},
+								"errorMessage": {
+									"type": "string"
+								},
+								"code": {
+									"type": "integer"
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"error"
+							]
+						}
+					}
+				}
+			}
+		}
+	},
+	"info": {
+		"description": "",
+		"license": {}
+	}
+}
