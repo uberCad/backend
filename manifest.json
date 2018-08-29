@@ -1,0 +1,40 @@
+{
+  "name": "api-db-uber-cad",
+  "version": "1.0.0",
+  "license": "Apache License 2.0",
+  "description": "foxx service api arangodb for uberCad soft.",
+  "thumbnail": "files/favicon.png",
+  "keywords": ["cad", "service"],
+  "author": "Thermevo",
+  "contributors": [
+    {
+      "name": "Gary",
+      "email": "netzver@gmail.com"
+    },
+    {
+      "name": "Volodymyr Shcherbyna",
+      "email": "vladimshc@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "main": "index.js",
+  "defaultDocument": "index.html",
+  "engines": {
+    "arangodb": "^3.0.0"
+  },
+  "scripts": {
+    "setup": "scripts/setup.js"
+  },
+  "files": {
+    "/index.html": {
+      "path": "files/index.html"
+    },
+    "/favicon.png": {
+      "path": "files/favicon.png"
+    }
+  },
+  "lib": "."
+}
